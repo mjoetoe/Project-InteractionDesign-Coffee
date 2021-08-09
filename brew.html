@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Coffee</title>
+        <meta name="description" content="This is my HTML5 boilerplate.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="msapplication-TileColor" content="#F3F3F3">
+        <meta name="theme-color" content="#F3F3F3">
+
+        <link rel="icon" href="img/svg/coffee.ico" type="image/gif" sizes="16x16">
+        
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#3385FF">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/screen.css">
+        <script src="./script/app.js"></script> 
+    </head>
+    <style>
+      body{
+        height: 100%;
+        color:white;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        
+      }
+
+      .fullscreen {
+        filter: blur(5px) brightness(50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+        height: 20%;
+      }
+
+      div{
+        display: block;
+      }
+      .c-main--container{
+        width: 48rem;
+        margin: 0 auto;
+        padding: calc(0.5rem * 4) calc(0.5rem * 2) 0;
+        padding-bottom: 48px;
+      }
+      .c-main--container .c-main--title {
+        font-size: 3rem;
+        letter-spacing: 1px;
+        margin: .25em;
+        font-weight: 500;
+        text-align: center;
+      }
+      .c-main{
+        display: flex;
+        grid-template-columns: 150px auto 150px;
+        grid-gap: 1em;
+        position: absolute;
+        justify-content: center;
+        top:0;
+        width: 100%;
+      }
+
+      .c-main__card{
+        color:black;
+      }
+      .c-card{
+          background: white;
+          box-shadow: 0 0.5rem calc(calc(0.5rem * 3) * 2) rgba(0,0,0,0.05);
+          border-radius: 1.5625rem;
+          padding: calc(0.5rem * 3);
+          text-align: center;
+      }
+      .c-card__image{
+          padding-top: 20px;
+          padding-bottom: 20px;
+      }
+    </style>
+    <body>
+      <section class="fullscreen" style="background-image: url('https://coffee.alexflipnote.dev/random') ">
+      </section>
+      <div class="c-main">
+        <div class="c-main--container">
+            <div class="c-main--title">
+                <div class="c-logo" style="text-align:center">
+                    ☕
+                </div>
+            </div>
+            
+            <div class="c-main__card">
+                <div class="c-card">
+                    <h3>Black</h3>
+                    <div class="c-card__title">
+                        Black coffee is as simple as it gets with ground coffee beans steeped in hot water, served warm. And if you want to sound fancy, you can call black coffee by its proper name: cafe noir.  
+                    </div>
+                    <div class="c-card__image">
+                        <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width="50%" />
+                    </div>
+                    <b>Ingredients 🥗 : </b>
+                    <div class="c-card__ingredients">
+                        - Coffee
+                    </div>
+                    <div class="c-card__button">
+                        <button class="c-button"> Brew more!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </body>
+</html>
