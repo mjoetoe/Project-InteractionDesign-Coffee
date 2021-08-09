@@ -1,5 +1,4 @@
-let main = {},  form = { email:{},name:{},submit:{}}, page = {}, loadingwindow;
-
+let main = {}, card = {}, form = { email:{},name:{},submit:{}}, page = {}, loadingwindow;
 
 let getDOMElements = () => {
 
@@ -11,8 +10,22 @@ let getDOMElements = () => {
     form.name.message = document.querySelector(".js-form-name-message");
     form.name.field = document.querySelector(".js-form-name-field");
 
-
     form.submit = document.querySelector(".js-form-submit");
+
+
+    card.title = document.querySelector(".js-card__title");
+    card.desc = document.querySelector(".js-card__desc");
+    card.image = document.querySelector(".js-card__image");
+    
+    card.button = document.querySelector(".js-button");
+    card.idgredients = document.querySelector(".js-ingredients")
+    console.log(card.button)
+    if(card.button){
+        card.button.addEventListener("click",() => {
+            
+            getCoffeeAPI()
+        });
+    }
 }
 
 let enableListeners = () => {
@@ -82,11 +95,52 @@ const removeErrors = function (globalVar) {
     globalVar.message.innerHTML = "";
 }
 
+const getCoffeeAPI = function(){
+    // Eerst bouwen we onze url op
+	let url = `https://api.sampleapis.com/coffee/hot`;
+	// Met de fetch API proberen we de data op te halen.
+	fetch(url)
+		.then(req => {
+			if (!req.ok) {
+				console.error('Error with fetch');
+			} else {
+				return req.json();
+			}
+		})
+		.then(json => {
+			console.log(json[0].title);
+            showCoffee(json)
+		});
+    // Als dat gelukt is, gaan we naar onze showCoffee functie.
+    
+};
+
+
+let showCoffee = function(json){
+    let random = Math.floor(Math.random() * 20)
+    console.log(random)
+    console.log(json[random])
+    card.title.innerHTML = json[random].title
+    card.desc.innerHTML = json[random].description
+    card.idgredients.innerHTML = " ";
+    
+    json[random].ingredients.forEach(element => {
+        console.log(element)
+        card.idgredients.innerHTML += 
+        `<div> - ${element}</div>`;
+    });
+}
 document.addEventListener('DOMContentLoaded', function () {
     getDOMElements();
 
-    page.find = document.querySelector(".js-page-find");
-    page.intro = document.querySelector(".js-page-intro");
+    page.brew = document.querySelector(".js-page-brew");
+    page.landing = document.querySelector(".js-page-landing");
 
-    enableListeners();
+    if (page.brew) {
+        
+        getCoffeeAPI();
+    }
+    if (page.landing) {
+        enableListeners();
+    }
 });
