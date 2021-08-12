@@ -123,7 +123,7 @@ let showCoffee = function(json){
     card.title.innerHTML = json[random].title
     card.desc.innerHTML = json[random].description
     card.idgredients.innerHTML = " ";
-    
+    card.image.src = `img/coffee/${random + 1}.jpg`
     json[random].ingredients.forEach(element => {
         console.log(element)
         card.idgredients.innerHTML += 
