@@ -116,7 +116,9 @@ const getCoffeeAPI = function(){
 };
 
 
-let showCoffee = function(json){
+const showCoffee = function (json){
+    document.querySelector('.js-loading').style.visibility = 'visible'
+
     let random = Math.floor(Math.random() * 20)
     console.log(random)
     console.log(json[random])
@@ -129,7 +131,10 @@ let showCoffee = function(json){
         card.idgredients.innerHTML += 
         `<div> - ${element}</div>`;
     });
+    setTimeout(() => {document.querySelector('.js-loading').style.visibility = 'hidden'}, 1000)
+    
 }
+
 document.addEventListener('DOMContentLoaded', function () {
     getDOMElements();
 
