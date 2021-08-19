@@ -24,7 +24,7 @@
     --color-x-light: #F3F3F3;
     --color-xx-light: #E9E9E9;
     --color-button: #6E6CE4;
-    --color-font: #404040;
+    --color-font:brown;
     --global-baseline: 8px; 
     --global-whitespace-xs: calc(var(--global-baseline) / 2); /* = 4px */
     --global-whitespace-sm: var(--global-baseline); /* = 8px */
@@ -751,7 +751,7 @@ input {
     transition:all 0.2s ease;
 }
 
-.c-button:hover {
+/* .c-button:hover {
     background:#0b4546;
     box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
     transform: scale(1.01);
@@ -762,7 +762,7 @@ input {
     background:#137476;
     box-shadow: 0 0 0 2px var(--g-page-backgroundColor), 0 0 0 5px #137476;
     transform: scale(0.99);
-}
+} */
 
 /*------------------------------------*\
 #UTILITIES
