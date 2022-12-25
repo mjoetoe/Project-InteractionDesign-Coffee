@@ -7,7 +7,7 @@ Welcome to the Coffee website! This website was created as a school project, wit
 - Explore the various types of coffee available through the website
 
 ## Technologies Used
-This website was built using HTML and CSS, with the integration of a specific API.
+This website was built using HTML, Javascript and CSS, with the integration of a specific API.
 
 ## Future Plans
 We are constantly adding new types of coffee to the website, so be sure to check back often for updates. We also have plans to add additional features to the website in the future, such as the ability to purchase coffee beans or grounds directly from the site.
